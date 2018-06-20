@@ -93,6 +93,21 @@ gulp.task('minify-html', function() {
 });
 
 // 压缩图片
+// var imagemin = require('gulp-imagemin');
+// gulp.task('minify-imgs', function() {
+//   return gulp.src('src/images/*.{png,jpg,gif,ico}')
+//     .pipe(imagemin({
+//             optimizationLevel: 4, //类型：Number  默认：3  取值范围：0-7（优化等级）
+//             progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+//             interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
+//             multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
+//         }))
+//     .pipe(rev())
+//     .pipe(gulp.dest('dist/images'))
+//     .pipe(rev.manifest())
+//     .pipe(gulp.dest('./rev/images'));
+// });
+
 var imagemin = require('gulp-imagemin');
 gulp.task('minify-imgs', function() {
   return gulp.src('src/images/*.{png,jpg,gif,ico}')
@@ -102,12 +117,8 @@ gulp.task('minify-imgs', function() {
             interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
             multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
         }))
-    .pipe(rev())
     .pipe(gulp.dest('dist/images'))
-    .pipe(rev.manifest())
-    .pipe(gulp.dest('./rev/images'));
 });
-
 
 /**
 * 替换html文件中资源路径  如js，css，images

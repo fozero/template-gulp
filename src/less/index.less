@@ -1,43 +1,158 @@
+// 清除浏览器默认样式
+@import "node_modules/normalize.less/normalize.less";
 *{
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
-// .win{transform: translateX(-50%);}
-
-.header{
-	font-size: 14px;
-	color:#666;
-	text-align: center;
-	img{
-		width: 100px;
-		height: 100px;
-		border-radius: 100%;
+html,body{
+	height: 100%;
+}
+.clearfix{
+	zoom:1;//为了兼容IE
+	.clearfix:after{
+		content: "";//设置内容为空
+		height: 0;//高度为0
+		line-height: 0;
+		display: block;
+		visibility: hidden;
+		clear: both;
 	}
 }
+.hide{
+	display: none !important;
+}
+.block{
+	display: block;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.go-index{
+	display: block;
+	width: 55px;
+	padding: 8px 8px;
+	line-height: 18px;
+	font-size: 14px;
+	text-decoration: none;
+	color: #fcf6b8;
+	// background: #fa5d36;
+	    background: #16a1d0;
+	border-radius: 5px;
+	text-align: center;
+	position: fixed;
+	top: 26px;
+	left: 50%;
+	margin-left: 502px;
+	z-index: 100;
+}
+
 
 .main{
-	font-size: 18px;
-	color: red;
-	text-align: center;
-}
-.main__login{
-	border:1px solid #eee;
-	width: 400px;
-	margin: 10px auto;
-	padding: 20px 0;
-}
-.main__login__item{
-	margin-top:20px;
-	input{
-		border: 1px solid #eee;
-		padding: 8px 5px;
+	font-size: 22px;
+	    height: 3086px;
+    min-width: 1000px;
+    position: relative;
+	background: url('../images/bg.jpg') no-repeat center/100% 3086px;
+	// padding-top:994px;
+	.btn_get{
+		width: 387px;
+		height: 195px;
+		background: url('../images/get_btn.png') no-repeat center/387px 195px;
+		margin:0 auto;
+		cursor: pointer;
+		position: absolute;
+		top:994px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.block1{
+		    width: 1040px;
+			height: 909px;
+    		margin: 0 auto;
+			background: url('../images/block1_bg.png') no-repeat center/1040px 909px;
+			position: absolute;
+			top:1191px;
+			left: 50%;
+			transform: translateX(-50%);
+				line-height: 38px;
+				.desc{
+					color: #1882ad;
+					padding: 240px 95px 0;
+					line-height: 38px;
+					text-align: center;
+				}
+				.borrow_money{
+					width: 373px;
+					height:213px;
+					background: url('../images/borrow_money_bg.png') no-repeat center/373px 213px;
+					margin: 20px auto 0;
+					text-align: center;
+				    padding-top: 114px;
+				    color: #fc5f6a;
+				    font-size: 24px;
+				}
+				.progress{
+					position: relative;
+					.timeline-block{
+						position: relative;
+						// .r_money{
+						// 	position: absolute;
+						// 	left: 0;
+						// 	top: 0;
+						// }
+						// .b_money{
+						// 	position: absolute;
+						// 	left: 0;
+						// 	bottom: 0;
+						// }
+					}
+					// &::before{
+					// 	content: '';
+					//     position: absolute;
+					//     top: 0;
+					//     left: 84px;
+					//     height: 19px;
+					//     width: 860px;
+					//     background: url('../images/line.png') no-repeat center/860px 19px;
+					// }
+
+				}
+	}
+	.btn_borrow{
+		width: 661px;
+		height: 266px;
+		background: url('../images/borrower_btn.png') no-repeat center/661px 266px;
+		margin:0 auto;
+		cursor: pointer;
+		position: absolute;
+			top:2090px;
+			left: 50%;
+			transform: translateX(-50%);
+	}
+	.block2{
+		    width: 1040px;
+			height: 759px;
+    		margin: 0 auto;
+			background: url('../images/block2_bg.png') no-repeat center/1040px 759px;
+			position: absolute;
+			top:2268px;
+			left: 50%;
+			transform: translateX(-50%);
+    		color: #1882ad;
+			.rule{
+				padding: 232px 80px 0;
+				line-height: 38px;
+				.copyright{
+					    display: block;
+					text-align: center;
+					margin-top: 30px;
+				}
+			}	
 	}
 }
-.main__login__btn{
-	margin-top: 20px;
-	border: none;
-	background: yellow;
-	color:#fff;
-	width: 100px;
-	height: 38px;
-	border-radius: 5px;
-}
+
+
