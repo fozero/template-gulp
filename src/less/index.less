@@ -7,6 +7,12 @@
 }
 html,body{
 	height: 100%;
+	// 小米
+	// font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+	// 简书
+	// font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	// 推荐写法
+	font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .clearfix{
 	zoom:1;//为了兼容IE
@@ -31,23 +37,20 @@ html,body{
 .fr{
 	float: right;
 }
+ul{
+	list-style: none;
+}
 .go-index{
 	display: block;
-	width: 55px;
-	padding: 8px 8px;
-	line-height: 18px;
-	font-size: 14px;
+	width: 61px;
+	height: 61px;
 	text-decoration: none;
-	color: #fcf6b8;
-	// background: #fa5d36;
-	    background: #16a1d0;
-	border-radius: 5px;
-	text-align: center;
 	position: fixed;
 	top: 26px;
 	left: 50%;
 	margin-left: 502px;
 	z-index: 100;
+	background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/ic_index.png') no-repeat center/61px 61px;
 }
 
 
@@ -56,12 +59,13 @@ html,body{
 	    height: 3086px;
     min-width: 1000px;
     position: relative;
-	background: url('../images/bg.jpg') no-repeat center/100% 3086px;
+    // https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/bg.jpg
+	background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/bg.jpg') no-repeat center/100% 3086px;
 	// padding-top:994px;
 	.btn_get{
 		width: 387px;
 		height: 195px;
-		background: url('../images/get_btn.png') no-repeat center/387px 195px;
+		background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/get_btn.png') no-repeat center/387px 195px;
 		margin:0 auto;
 		cursor: pointer;
 		position: absolute;
@@ -69,11 +73,17 @@ html,body{
 		left: 50%;
 		transform: translateX(-50%);
 	}
+	.btn_get_login{
+		background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/get_btn_login.png') no-repeat center/387px 195px;
+	}
+	.btn_get_ok{
+		background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/get_btn_ok.png') no-repeat center/387px 195px;
+	}
 	.block1{
 		    width: 1040px;
 			height: 909px;
     		margin: 0 auto;
-			background: url('../images/block1_bg.png') no-repeat center/1040px 909px;
+			background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/block1_bg.png') no-repeat center/1040px 909px;
 			position: absolute;
 			top:1191px;
 			left: 50%;
@@ -88,44 +98,111 @@ html,body{
 				.borrow_money{
 					width: 373px;
 					height:213px;
-					background: url('../images/borrow_money_bg.png') no-repeat center/373px 213px;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/borrow_money_bg.png') no-repeat center/373px 213px;
 					margin: 20px auto 0;
 					text-align: center;
 				    padding-top: 114px;
 				    color: #fc5f6a;
 				    font-size: 24px;
+				    a{
+				    	color: #fc5f6a;
+				    	text-decoration: none;
+				    }
+				    .money{
+				    	font-size:14px;
+				    	color: #0195bd;
+				    	.num{
+							font-size:40px;
+							color: #fc5f6a;
+				    	}
+				    }
 				}
 				.progress{
+					    margin-top: 100px;
+					    color: #555555;
+					    font-size: 22px;
+				}
+				.progress .list{
+					     width: 880px;
+				    margin: 0 auto;
+				}
+				.progress .list .item{
 					position: relative;
-					.timeline-block{
-						position: relative;
-						// .r_money{
-						// 	position: absolute;
-						// 	left: 0;
-						// 	top: 0;
-						// }
-						// .b_money{
-						// 	position: absolute;
-						// 	left: 0;
-						// 	bottom: 0;
-						// }
-					}
-					// &::before{
-					// 	content: '';
-					//     position: absolute;
-					//     top: 0;
-					//     left: 84px;
-					//     height: 19px;
-					//     width: 860px;
-					//     background: url('../images/line.png') no-repeat center/860px 19px;
-					// }
-
+					float: left;
+				}
+				.progress .list .item .cicle{
+					display: inline-block;
+					width: 42px;
+					height: 42px;
+					border-radius: 100%;
+					// background: #dfdfdf;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/ic_node.png') no-repeat center/42px 42px;
+					position: absolute;
+					top:-5px;
+					left: 170px;
+					    z-index: 9999;
+				}
+				.progress .list .item .ic_timeline{
+					height: 19px;
+					width: 180px;
+					display: inline-block;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/line_center.png') center/180px 19px;
+					// background: #dfdfdf;
+				}
+				.progress .money{
+					 position: absolute;
+					           top: -70px;
+					               left: 130px;
+					                   width: 130px;
+					                   width: 120px;
+					    background: #d2d2d2;
+					    text-align: center;
+					    border-radius: 20px;
+				}
+				.progress .borrow{
+					 position: absolute;
+					           top: 60px;
+					              left: 130px;
+					                  width: 120px;
+					                      text-align: center;
+				}
+				/*首尾样式*/
+				.progress .list .item:first-child .ic_timeline{
+					width: 80px;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/line_start.png') center/80px 19px;
+				}
+				.progress .list .item:last-child .ic_timeline{
+					width: 80px;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/line_end.png') center/80px 19px;
+				}
+				.progress .list .item:first-child .cicle{
+					left: 60px;
+				}
+				.progress .list .item:first-child .money,.progress .list .item:first-child .borrow{
+					left: 25px;
+				}
+				/*激活状态*/
+				.progress .list .active .ic_timeline{
+					// background: #845FFD;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/line_center_selected.png') center/180px 19px;
+				}
+				.progress .list .active .cicle{
+					// background: #845FFD;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/ic_node_selected.png') no-repeat center/42px 42px;
+				}
+				.progress .list .active:first-child .ic_timeline{
+					width: 80px;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/line_start_selected.png') center/80px 19px;
+				}
+				.progress .list .active:last-child .ic_timeline{
+					width: 80px;
+					background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/line_end_selected.png') center/80px 19px;
 				}
 	}
 	.btn_borrow{
 		width: 661px;
 		height: 266px;
-		background: url('../images/borrower_btn.png') no-repeat center/661px 266px;
+		background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/borrower_btn.png') no-repeat center/661px 266px;
 		margin:0 auto;
 		cursor: pointer;
 		position: absolute;
@@ -137,7 +214,7 @@ html,body{
 		    width: 1040px;
 			height: 759px;
     		margin: 0 auto;
-			background: url('../images/block2_bg.png') no-repeat center/1040px 759px;
+			background: url('https://caiyunupload.b0.upaiyun.com/ydimg/theme/2018/07/summer/pc/block2_bg.png') no-repeat center/1040px 759px;
 			position: absolute;
 			top:2268px;
 			left: 50%;
